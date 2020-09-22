@@ -6,9 +6,9 @@ deploy:
       - ./infra/k8s/*
 build:
   local:
-    push: true
+    push: false
   artifacts:
-    - image: localhost:32000/auth
+    - image: hodjaev/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -16,7 +16,7 @@ build:
         manual:
           - src: 'src/**/*.ts'
             dest: .
-    - image: localhost:32000/client
+    - image: hodjaev/client
       context: client
       docker:
         dockerfile: Dockerfile
