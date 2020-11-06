@@ -15,10 +15,6 @@ spec:
       containers:
         - name: client
           image: hodjaev/client
-          resources:
-            limits:
-              memory: "128Mi"
-              cpu: "500m"
           ports:
           - containerPort: 3000
 ---
